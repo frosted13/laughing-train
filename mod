@@ -55,12 +55,12 @@ local mods = {
 
 if table.find(mods,player.UserId) then
 	isamod = true
-    CoreGui:SetCore("SendNotification", {
-        Title = "Premium";
-        Text = "Thank you for buying premium, enjoy!";
-        Duration = 10;
-        Button1 = "Your welcome";
-    })
+    GUI:Notification{
+        Title = "Premium",
+        Text = "Thanks for buying.",
+        Duration = 10,
+        Callback = function() end
+    }
 end
 
 local function cmds(msg,plr)
